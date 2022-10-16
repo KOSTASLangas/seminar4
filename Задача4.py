@@ -1,10 +1,14 @@
 # Задайте два числа. Напишите программу, которая найдет НОК (наименьшее общее кратное) этих двух чисел. 
 
-a, b = list(map(int, input().split()))
-flag = True
-for i in range(min(a, b) + 1, 2, -1):
-    if a % i == 0 and b % i == 0:
-        print(i)
-        flag = False
-if flag:
-    print('нет общего делителя')
+a = int(input('Введите число: '))
+b = int(input('Введите число: '))
+c = a
+d = b
+while a != 0 and b != 0:
+    if a > b:
+        a = a % b
+    else:
+        b = b % a
+
+god = a + b 
+print(abs(c * d) / god)
